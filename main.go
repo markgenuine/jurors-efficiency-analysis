@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"math"
 	"os"
@@ -31,18 +30,7 @@ func main() {
 
 	datesAddress := os.Args[1:]
 
-	file, err := os.Open("FreeTonContest.abi.json")
-	if err != nil {
-		fmt.Println("Error 1 open: ", err)
-		return
-	}
-
-	abiByte, err := ioutil.ReadAll(file)
-	if err != nil {
-		fmt.Println("Error 2 read file abi: ", err)
-		return
-	}
-
+	abiByte := []byte(abiForContest)
 	abiContract := domain.AbiContract{}
 	err = json.Unmarshal(abiByte, &abiContract)
 	if err != nil {
