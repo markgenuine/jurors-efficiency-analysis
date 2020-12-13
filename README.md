@@ -6,16 +6,15 @@ You can use scrypty 2 ways:
 1. Go to the link [https://github.com/markgenuine/jurors-efficiency-analysis/tree/main/bin] and downloads archive for you operationing system.
 2. Unpacked archive.
 3. Open console (terminal).
-4. Run command: 
+4. Run command and copy value with way files: 
 ```sh
 pwd
 ```
-copy value with way files.
-5. Run command:
+5. Run command and change "past_value_from_pwd" value from 4:
 ```sh
 export CGO_LDFLAGS="-L/past_value_from_pwd/ -lton_client"
 ```
-4. Run command:
+4. Run command and change "past_value_from_pwd" value from:
 ```sh 
 export LD_LIBRARY_PATH=/past_value_from_pwd/
 ```
